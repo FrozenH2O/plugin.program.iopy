@@ -16,7 +16,9 @@ It will then iterate through each file, if the file ends in .jpg or .jpeg (case 
 Where YYYY is the year the photo was taken and YYYY-MM-DD is the date in that format the photo was taken.
 
 If the filename ends in .mov, .m2ts, .mp4 or .avi it will use the filedate to work out the year / date
+
 i.e. DATE = time.strftime('%Y-%m-%d', time.gmtime(os.path.getmtime(PHOTO)))
+
 This is okay if you are copying from the original memory card, but if the file isn't in its original location and was moved on a different date you will get the incorrect date.
 
 It will create any missing folders.
